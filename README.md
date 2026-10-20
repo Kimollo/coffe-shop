@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ember & Oak ☕
 
-## Getting Started
+A one-page website for a neighborhood roastery and café in Cape Town. It presents the menu, the café's story, guest notes, and how to visit, in a clean and welcoming layout.
 
-First, run the development server:
+## Features
+
+- Sticky navigation for moving around the page
+- A menu button on smaller screens
+- A hero that introduces the café
+- A menu of what the café is pouring
+- An about section for the café's story
+- Testimonials from guests
+- A visit section with opening hours, a map, and a contact form
+- A footer with the address, hours, and email
+
+The contact form thanks the visitor on the page. It does not send the message anywhere yet.
+
+## Tech stack
+
+- **Next.js** — React framework, using the App Router
+- **React** — interface components
+- **Tailwind CSS** — styling and responsive layout
+- **Fraunces** — heading type
+- **Inter** — body type
+- **Vercel** — hosting
+
+## Getting started
+
+You need [Node.js](https://nodejs.org/) and npm.
+
+Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Kimollo/coffe-shop.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the project folder:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd coffe-shop
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies and start the site:
 
-## Learn More
+```bash
+npm install
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Live demo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[View the live website](https://coffe-shop-rust-two.vercel.app/)
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is hosted on [Vercel](https://coffe-shop-rust-two.vercel.app/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project purpose
+
+Ember & Oak is a café website built to practise responsive interfaces with Next.js, React, and Tailwind CSS.
