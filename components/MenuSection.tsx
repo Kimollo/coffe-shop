@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const menuItems = [
   {
     name: "House Espresso",
@@ -41,7 +43,7 @@ const tagStyles = {
 export default function MenuSection() {
   return (
     <section id="menu" className="w-full bg-cream px-6 py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl">
+      <FadeIn className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-4xl tracking-tight text-espresso sm:text-5xl">
             What we&apos;re pouring
@@ -76,7 +78,7 @@ export default function MenuSection() {
             </article>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

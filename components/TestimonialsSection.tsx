@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 const testimonials = [
   {
     quote:
@@ -21,8 +23,8 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="w-full bg-white px-6 py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section className="w-full bg-[#E6D3C2] px-6 py-24 sm:py-28">
+      <FadeIn className="mx-auto max-w-6xl">
         <h2 className="text-center font-heading text-4xl tracking-tight text-espresso sm:text-5xl">
           What people say
         </h2>
@@ -32,11 +34,7 @@ export default function TestimonialsSection() {
               key={item.name}
               className="rounded-xl border border-espresso/10 bg-cream p-6"
             >
-              <p className="text-sm tracking-widest text-terracotta">
-                <span className="sr-only">5 out of 5 stars</span>
-                <span aria-hidden="true">★★★★★</span>
-              </p>
-              <blockquote className="mt-4 text-base leading-7 text-espresso italic">
+              <blockquote className="text-base leading-7 text-espresso italic">
                 “{item.quote}”
               </blockquote>
               <figcaption className="mt-6">
@@ -46,7 +44,7 @@ export default function TestimonialsSection() {
             </figure>
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

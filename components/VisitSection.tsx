@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import FadeIn from "@/components/FadeIn";
 
 const hours = [
   { days: "Mon–Fri", time: "7am–5pm" },
@@ -22,12 +23,17 @@ export default function VisitSection() {
 
   return (
     <section id="visit" className="w-full bg-cream px-6 py-24 sm:py-28">
-      <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-16">
+      <FadeIn className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2 className="font-heading text-4xl tracking-tight text-espresso sm:text-5xl">
             Come say hello
           </h2>
           <p className="mt-4 text-lg text-espresso">12 Loop Street, Cape Town</p>
+          <p className="mt-1 text-mocha">
+            <a href="tel:+27210001846" className="transition-colors hover:text-terracotta">
+              021 000 1846
+            </a>
+          </p>
           <table className="mt-8 w-full max-w-sm text-left text-sm">
             <tbody>
               {hours.map((row) => (
@@ -40,8 +46,14 @@ export default function VisitSection() {
               ))}
             </tbody>
           </table>
-          <div className="mt-8 flex aspect-[4/3] items-center justify-center rounded-2xl bg-sage px-6 text-center text-cream">
-            Map — 12 Loop Street
+          <div className="mt-8 overflow-hidden rounded-2xl">
+            <iframe
+              title="Map of 12 Loop Street, Cape Town"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.4195%2C-33.9202%2C18.4244%2C-33.9170&layer=mapnik&marker=-33.9186024%2C18.4219509"
+              className="aspect-[4/3] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
 
@@ -109,7 +121,7 @@ export default function VisitSection() {
             </p>
           ) : null}
         </form>
-      </div>
+      </FadeIn>
     </section>
   );
 }

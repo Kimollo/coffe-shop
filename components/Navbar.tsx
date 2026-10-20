@@ -57,9 +57,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <button type="button" className={`${orderButtonClassName} ml-auto hidden md:inline-flex`}>
+        <a href="#menu" className={`${orderButtonClassName} ml-auto hidden md:inline-flex`}>
           Order ahead
-        </button>
+        </a>
 
         <button
           type="button"
@@ -95,9 +95,13 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
-          <button type="button" className={`${orderButtonClassName} mt-6 inline-flex w-full`}>
+          <a
+            href="#menu"
+            onClick={closeMenu}
+            className={`${orderButtonClassName} mt-6 inline-flex w-full`}
+          >
             Order ahead
-          </button>
+          </a>
         </div>
       ) : null}
     </header>

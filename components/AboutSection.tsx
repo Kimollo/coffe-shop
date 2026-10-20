@@ -1,12 +1,13 @@
 import Image from "next/image";
+import FadeIn from "@/components/FadeIn";
 
-const values = ["Roasted in-house", "Single-origin beans", "Open 7 days"];
+const values = ["Wi-Fi", "Dogs welcome", "Open 7 days"];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="w-full bg-white px-6 py-24 sm:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl sm:aspect-[5/4] lg:aspect-[4/5]">
+    <section id="about" className="w-full overflow-hidden bg-white py-24 sm:py-28">
+      <FadeIn className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-2 lg:gap-16 lg:px-6">
+        <div className="relative h-48 w-full overflow-hidden sm:h-56 lg:aspect-[4/5] lg:h-auto lg:rounded-2xl">
           <Image
             src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1400&q=80"
             alt="Warm light over wooden tables in a neighborhood coffee shop"
@@ -16,7 +17,7 @@ export default function AboutSection() {
           />
         </div>
 
-        <div>
+        <div className="px-6 lg:px-0">
           <h2 className="font-heading text-4xl tracking-tight text-espresso sm:text-5xl">
             A little corner of calm
           </h2>
@@ -47,7 +48,7 @@ export default function AboutSection() {
             ))}
           </ul>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
